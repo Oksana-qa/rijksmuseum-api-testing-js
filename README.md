@@ -1,6 +1,6 @@
 # Rijksmuseum automatin API testing
 
-Functionality testing of open Rijksmuseum API using SuperTest, Mocha, and Chai.
+Functionality testing of open [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/) using SuperTest, Mocha, and Chai.
 [SuperTest](https://www.npmjs.com/package/supertest) is a test framework for testing API requests.
 [Mocha](https://www.npmjs.com/package/mocha) is a popular JavaScript test framework that runs on Node.js.
 [Chai](https://www.npmjs.com/package/chai) is an assertion library for browser and node.js that can be paired with any JavaScript framework.
