@@ -34,4 +34,4 @@ npm test
 ```
 
 ## To run on TravisCI
-TravisCI is a continuous integration service used to build and test software projects hosted on GitHub and Bitbucket. Current project configurated to be run on TravisCI (see .travis.yml file).
+[TravisCI](https://www.travis-ci.com) is a continuous integration service used to build and test software projects hosted on GitHub and Bitbucket. Current project configurated to be run on TravisCI (see .travis.yml file).
