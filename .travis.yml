@@ -3,4 +3,4 @@ node_js: '14'
 
 install: npm install supertest mocha chai --save-dev
 
-script: make test
+script: npm test
