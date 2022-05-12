@@ -1,10 +1,11 @@
 language: node_js
-node_js: '14'
+node_js: 
+  -'14.19.1'
 
 install:
-— npm install supertest 
-- npm install mocha 
-- npm install chai
+  - stall supertest 
+  - npm install mocha 
+  - npm install chai
 
 script:
- — make test
+  — make test
