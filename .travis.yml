@@ -2,7 +2,7 @@ language: node_js
 node_js: '14'
 
 install:
-  - stall supertest 
+  - npm istall supertest 
   - npm install mocha 
   - npm install chai
 
