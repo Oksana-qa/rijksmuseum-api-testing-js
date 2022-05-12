@@ -1,0 +1,10 @@
+language: node_js
+node_js: '14'
+
+install:
+— npm install supertest 
+- npm install mocha 
+- npm install chai
+
+script:
+ — make test
