@@ -13,8 +13,8 @@ const ELEMENTS_NUMBER = 3608
 const ART_OBJECT_NUMBER = 'SK-C-5'
 
 const DEFAULT_NUMBER_OF_RESULTS_PER_PAGE = 10
-const NUMBER_OF_RESULTS_PER_PAGE = 2
-const PAGE_NUMBER = 2
+const NUMBER_OF_RESULTS_PER_PAGE = 1
+const PAGE_NUMBER = 1
 
 describe('Rijksmuseum API `GET /collection`', () => {
 
