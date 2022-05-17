@@ -1,4 +1,4 @@
-# Rijksmuseum automatin API testing
+# Rijksmuseum automation API testing
 [![Build Status](https://app.travis-ci.com/Oksana-qa/rijksmuseum-api-testing-js.svg?branch=main)](https://app.travis-ci.com/Oksana-qa/rijksmuseum-api-testing-js)
 
 Functionality testing of open [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/) using SuperTest, Mocha, and Chai.
