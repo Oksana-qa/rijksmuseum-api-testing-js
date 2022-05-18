@@ -9,23 +9,23 @@ Functionality testing of open [Rijksmuseum API](https://data.rijksmuseum.nl/obje
 ## Test Scenarious
 ### GET /collection
 ```
-IF no api key THEN code IS 401
-IF no api key THEN text IS 'Invalid key'
-IF api key THEN code IS 200
-IF api key AND involvedMaker IS Rembrandt van Rijn THEN body IS Not Empty
-IF api key AND involvedMaker IS Rembrandt van Rijn THEN response elements number IS {expected_value}
-IF api key AND involvedMaker IS Rembrandt van Rijn THEN art objects count IS {expected_value}
-IF api key AND involvedMaker IS Rembrandt van Rijn AND page number IS {some_value} THEN art objects count IS {expected_value}
-IF api key AND involvedMaker IS Rembrandt van Rijn THEN first art object number IS {expected_value}
+WHEN no api key THEN code IS 401
+WHEN no api key THEN text IS 'Invalid key'
+WHEN api key THEN code IS 200
+WHEN api key AND involvedMaker IS Rembrandt van Rijn THEN body IS Not Empty
+WHEN api key AND involvedMaker IS Rembrandt van Rijn THEN response elements number IS {expected_value}
+WHEN api key AND involvedMaker IS Rembrandt van Rijn THEN art objects count IS {expected_value}
+WHEN api key AND involvedMaker IS Rembrandt van Rijn AND page number IS {some_value} THEN art objects count IS {expected_value}
+WHEN api key AND involvedMaker IS Rembrandt van Rijn THEN first art object number IS {expected_value}
 ```
 
 ### GET /collection/[object-number]
 ```
-IF no api key THEN code IS 401
-IF no api key THEN text IS 'Invalid key'
-IF api key THEN code IS 200
-IF api key THEN body IS Not Empty
-IF api key AND request object number IS {some_value} THEN response objectNumber IS {expected_value}
+WHEN no api key THEN code IS 401
+WHEN no api key THEN text IS 'Invalid key'
+WHEN api key THEN code IS 200
+WHEN api key THEN body IS Not Empty
+WHEN api key AND request object number IS {some_value} THEN response objectNumber IS {expected_value}
 ```
 
 ## To run locally

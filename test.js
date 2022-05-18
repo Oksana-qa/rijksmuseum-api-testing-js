@@ -18,7 +18,7 @@ const PAGE_NUMBER = 1
 
 describe('Rijksmuseum API `GET /collection`', () => {
 
-    it('IF no api key THEN code IS ' + CODE_UNAUTHORIZED, () => {
+    it('WHEN no api key THEN code IS ' + CODE_UNAUTHORIZED, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -28,7 +28,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
 			.expect(CODE_UNAUTHORIZED)
 	});
 
-    it('IF no api key THEN text IS ' + TEXT_UNAUTHORIZED, () => {
+    it('WHEN no api key THEN text IS ' + TEXT_UNAUTHORIZED, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -41,7 +41,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
             });
 	});
 
-    it('IF api key THEN code IS ' + CODE_OK, () => {
+    it('WHEN api key THEN code IS ' + CODE_OK, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -51,7 +51,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
 			.expect(CODE_OK);
 	});
 
-    it('IF api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN body IS Not Empty', () => {
+    it('WHEN api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN body IS Not Empty', () => {
 		return request
 			.get('/collection')
 			.query(
@@ -64,7 +64,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
             });
 	});
 
-    it('IF api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN response elements number IS ' + ELEMENTS_NUMBER, () => {
+    it('WHEN api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN response elements number IS ' + ELEMENTS_NUMBER, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -77,7 +77,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
             });
 	});
 
-    it('IF api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN art objects count IS ' + DEFAULT_NUMBER_OF_RESULTS_PER_PAGE, () => {
+    it('WHEN api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN art objects count IS ' + DEFAULT_NUMBER_OF_RESULTS_PER_PAGE, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -90,7 +90,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
             });
 	});
 
-    it('IF api key AND involvedMaker IS ' + INVOLVER_MAKER + ' AND page number IS ' + PAGE_NUMBER +' THEN art objects count IS ' + NUMBER_OF_RESULTS_PER_PAGE, () => {
+    it('WHEN api key AND involvedMaker IS ' + INVOLVER_MAKER + ' AND page number IS ' + PAGE_NUMBER +' THEN art objects count IS ' + NUMBER_OF_RESULTS_PER_PAGE, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -104,7 +104,7 @@ describe('Rijksmuseum API `GET /collection`', () => {
             });
 	});
 
-    it('IF api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN first art object number IS ' + ART_OBJECT_NUMBER, () => {
+    it('WHEN api key AND involvedMaker IS ' + INVOLVER_MAKER + ' THEN first art object number IS ' + ART_OBJECT_NUMBER, () => {
 		return request
 			.get('/collection')
 			.query(
@@ -122,13 +122,13 @@ describe('Rijksmuseum API `GET /collection`', () => {
 
 describe('Rijksmuseum API `GET /collection/[object-number]`', () => {
 
-    it('IF no api key THEN code IS ' + CODE_UNAUTHORIZED, () => {
+    it('WHEN no api key THEN code IS ' + CODE_UNAUTHORIZED, () => {
 		return request
 			.get('/collection/' + ART_OBJECT_NUMBER)
 			.expect(CODE_UNAUTHORIZED)
 	});
 
-    it('IF no api key THEN text IS ' + TEXT_UNAUTHORIZED, () => {
+    it('WHEN no api key THEN text IS ' + TEXT_UNAUTHORIZED, () => {
 		return request
             .get('/collection/' + ART_OBJECT_NUMBER)
             .then((res) => {
@@ -137,7 +137,7 @@ describe('Rijksmuseum API `GET /collection/[object-number]`', () => {
             });
 	});
 
-    it('IF api key THEN code IS ' + CODE_OK, () => {
+    it('WHEN api key THEN code IS ' + CODE_OK, () => {
 		return request
             .get('/collection/' + ART_OBJECT_NUMBER)
 			.query(
@@ -147,7 +147,7 @@ describe('Rijksmuseum API `GET /collection/[object-number]`', () => {
 			.expect(CODE_OK);
 	});
 
-    it('IF api key THEN body IS Not Empty', () => {
+    it('WHEN api key THEN body IS Not Empty', () => {
 		return request
             .get('/collection/' + ART_OBJECT_NUMBER)
 			.query(
@@ -159,7 +159,7 @@ describe('Rijksmuseum API `GET /collection/[object-number]`', () => {
             });
 	});
 
-    it('IF api key AND request object number IS ' + ART_OBJECT_NUMBER + ' THEN response objectNumber IS ' + ART_OBJECT_NUMBER, () => {
+    it('WHEN api key AND request object number IS ' + ART_OBJECT_NUMBER + ' THEN response objectNumber IS ' + ART_OBJECT_NUMBER, () => {
 		return request
             .get('/collection/' + ART_OBJECT_NUMBER)
 			.query(
